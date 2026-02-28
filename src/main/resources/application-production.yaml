@@ -1,6 +1,8 @@
 spring:
   datasource:
     url: "jdbc:${DATABASE_URL}"
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
     hikari:
       data-source-properties:
         sslmode: require
@@ -8,6 +10,3 @@ spring:
   sql:
     init:
       mode: always
-
-logging:
-  level: debug
