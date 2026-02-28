@@ -7,10 +7,6 @@ spring:
       data-source-properties:
         sslmode: require
 
-  sql:
-    init:
-      mode: always
-
 logging:
   level:
-    root: debug
+    org.springframework.boot.autoconfigure.jdbc: DEBUG
