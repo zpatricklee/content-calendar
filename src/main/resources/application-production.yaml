@@ -9,10 +9,3 @@ spring:
   sql:
     init:
       mode: ALWAYS
-
-logging:
-  level:
-    org.springframework.core.env: TRACE
-    org.springframework.boot.context.config: TRACE
-    org.springframework.boot.autoconfigure.jdbc: TRACE
-    org.springframework.boot.context.properties: TRACE
