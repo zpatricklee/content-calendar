@@ -6,6 +6,9 @@ spring:
     hikari:
       data-source-properties:
         sslmode: require
+  sql:
+    init:
+      mode: ALWAYS
 
 logging:
   level:
