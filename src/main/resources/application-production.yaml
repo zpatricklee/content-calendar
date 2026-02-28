@@ -10,3 +10,7 @@ spring:
   sql:
     init:
       mode: always
+
+logging:
+  level:
+    org.springframework.boot.autoconfigure.jdbc: DEBUG
