@@ -26,12 +26,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/appdb
     username: postgres
     password: postgres
-  jdbc:
-    schema: classpath:schema.sql
-    data: classpath:data.sql
   sql:
     init:
-      mode: ALWAYS
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
 
 cc:
   welcomeMessage: Welcome to Pat's Content Calendar!
