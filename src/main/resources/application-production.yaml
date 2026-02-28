@@ -13,4 +13,4 @@ spring:
 
 logging:
   level:
-    org.springframework.boot.autoconfigure.jdbc: DEBUG
+    root: debug
