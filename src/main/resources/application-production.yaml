@@ -1,9 +1,9 @@
 # PRODUCTION FILE LOADED
 spring:
   datasource:
-    url: "jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}"
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
+    url: "jdbc:postgresql://${systemEnvironment.PGHOST}:${systemEnvironment.PGPORT}/${systemEnvironment.PGDATABASE}"
+    username: ${systemEnvironment.PGUSER}
+    password: ${systemEnvironment.PGPASSWORD}
     hikari:
       data-source-properties:
         sslmode: require
