@@ -30,7 +30,6 @@ spring:
     init:
       mode: always
       schema-locations: classpath:schema.sql
-      data-locations: none
 
 cc:
   welcomeMessage: Welcome to Pat's Content Calendar!
