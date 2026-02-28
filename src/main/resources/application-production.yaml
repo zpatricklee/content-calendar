@@ -1,3 +1,4 @@
+# PRODUCTION FILE LOADED
 spring:
   datasource:
     url: "jdbc:${DATABASE_URL}"
