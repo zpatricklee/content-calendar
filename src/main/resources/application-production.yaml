@@ -1,10 +1,10 @@
 spring:
   datasource:
-    username: ${PGUSER}
-    password: ${PGPASSWORD}
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    url: ${DATABASE_URL}
+    hikari:
+      data-source-properties:
+        sslmode: require
 
   sql:
     init:
-      mode: ALWAYS
-
+      mode: always
