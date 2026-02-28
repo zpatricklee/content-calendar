@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+
+  sql:
+    init:
+      mode: ALWAYS
+

@@ -1,0 +1,38 @@
+#spring:
+#  application:
+#    name: content-calendar
+#  profiles:
+#    active: dev
+#
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#    generate-unique-name: false
+#    name: content
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include:
+#          - '*'
+#  endpoint:
+#    health:
+#      show-details: ALWAYS
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/appdb
+    username: postgres
+    password: postgres
+  jdbc:
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  sql:
+    init:
+      mode: ALWAYS
+
+cc:
+  welcomeMessage: Welcome to Pat's Content Calendar!
+  about: This is Pat's content calendar
