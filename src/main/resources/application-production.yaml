@@ -9,4 +9,6 @@ spring:
 
 logging:
   level:
-    org.springframework.boot.autoconfigure.jdbc: DEBUG
+    org.springframework.boot.autoconfigure.jdbc: trace
+    org.springframework.core.env: trace
+    com.zaxxer.hikari: debug
