@@ -16,9 +16,11 @@ class DataLoader(
 
 
     override fun run(vararg args: String?) {
-        val inputStream = javaClass.getResourceAsStream("/data/content.json")
-            ?: throw IllegalStateException("Could not find /data/content.json on classpath")
-        val items: List<Content> = objectMapper.readValue(inputStream)
-        repository.saveAll(items)
+        if (repository.count().toInt() == 0) {
+            val inputStream = javaClass.getResourceAsStream("/data/content.json")
+                ?: throw IllegalStateException("Could not find /data/content.json on classpath")
+            val items: List<Content> = objectMapper.readValue(inputStream)
+            repository.saveAll(items)
+        }
     }
 }
